@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.background {
+	background: rgb(74, 4, 78);
+	background: radial-gradient(circle at center 130%, rgba(74, 4, 78, 1) 0%, rgba(3, 7, 18, 1) 50%);
+	background-attachment: fixed;
+}
+
+@layer components {
+	.button {
+		@apply box-border py-2.5 px-4 text-lg font-medium rounded transition-colors disabled:opacity-60 disabled:cursor-not-allowed;
+	}
+
+	.button.button-primary {
+		@apply bg-fuchsia-700 text-white hover:bg-fuchsia-800 active:bg-fuchsia-900;
+	}
+
+	.button.button-outline-primary {
+		@apply ring-1 ring-inset ring-fuchsia-700 bg-transparent hover:bg-fuchsia-800 hover:ring-fuchsia-800 active:bg-fuchsia-900 active:ring-fuchsia-900;
+	}
+}
